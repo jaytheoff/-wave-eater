@@ -38,3 +38,9 @@ func _physics_process(delta: float) -> void:
 	velocity.y = input_vector.y * speed
 
 	move_and_slide()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	water += 12
+	if water > 65:
+		water = 65

@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+Player=""
+Building=""
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
