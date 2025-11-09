@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=3 uid="uid://cngoomkx2u7pn"]
+
+[ext_resource type="Texture2D" uid="uid://bonfl4o1sqh1r" path="res://Images/Sunken Building-Sheet.png" id="1_e37n3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8dyh"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe7t1"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah46h"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bibhr"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeh0x"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5owsq"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h48tu"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofic7"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6tpi"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyamw"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0baxu"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_714a1"]
+atlas = ExtResource("1_e37n3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbmfp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8dyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe7t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ah46h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bibhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeh0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5owsq")
+}],
+"loop": true,
+"name": &"Rise",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h48tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofic7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6tpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofic7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyamw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofic7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6tpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0baxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_714a1")
+}],
+"loop": true,
+"name": &"Sink",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nn8dy"]
+radius = 11.045361
+
+[node name="Building" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jbmfp")
+animation = &"Rise"
+frame = 5
+frame_progress = 0.13943155
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_nn8dy")
+debug_color = Color(0.90675634, 0.08488151, 0.70833266, 0.41960785)
