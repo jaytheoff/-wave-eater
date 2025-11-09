@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		get_tree().paused = true
 		$"CanvasLayer/Game Over".visible = true
 
-	_spawn_building(Vector2(randf() * 800, -50))
+	
 
 func _on_Timer_timeout() -> void:
 	timer += 1
@@ -30,3 +30,6 @@ func _spawn_building(pos) -> void:
 	var bld_instance = building.instantiate()
 	bld_instance.position = Vector2(pos)
 	add_child(bld_instance)
+
+func _on_spawn_timer1_timeout() -> void:
+	_spawn_building(Vector2(randf_range(563,-170), (randf_range(0,109))))

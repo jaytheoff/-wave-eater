@@ -141,7 +141,7 @@ script = ExtResource("1_r0x5m")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 4
-position = Vector2(-133, 36)
+position = Vector2(-170, 40)
 script = ExtResource("1_wbfu4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -293,5 +293,9 @@ offset_bottom = 116.0
 color = Color(0.25490198, 0.57254905, 0.7647059, 1)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Spawntimer1" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
 
 [connection signal="pressed" from="CanvasLayer/Game Over/Retry" to="." method="_on_retry_pressed"]
