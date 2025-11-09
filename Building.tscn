@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cngoomkx2u7pn"]
+[gd_scene load_steps=17 format=3 uid="uid://cngoomkx2u7pn"]
 
 [ext_resource type="Texture2D" uid="uid://bonfl4o1sqh1r" path="res://Images/Sunken Building-Sheet.png" id="1_e37n3"]
+[ext_resource type="Script" uid="uid://bdwwwokarb1e5" path="res://Scripts/building.gd" id="1_v8dyh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8dyh"]
 atlas = ExtResource("1_e37n3")
@@ -112,6 +113,7 @@ animations = [{
 radius = 11.045361
 
 [node name="Building" type="Area2D"]
+script = ExtResource("1_v8dyh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jbmfp")
