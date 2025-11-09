@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://bhp27aqeolia"]
 
-[ext_resource type="Script" uid="uid://b35nni8fqcrav" path="res://game.gd" id="1_r0x5m"]
+[ext_resource type="Script" uid="uid://b35nni8fqcrav" path="res://Scripts/game.gd" id="1_joorw"]
 [ext_resource type="Script" uid="uid://8a22alr7xu0u" path="res://Scripts/player.gd" id="1_wbfu4"]
 [ext_resource type="Texture2D" uid="uid://b3usyv0oae2sp" path="res://Images/Wave-Sheet.png" id="2_u44n3"]
 [ext_resource type="Texture2D" uid="uid://qwhgr6eqecwo" path="res://Images/Water.png" id="2_xkndl"]
@@ -137,7 +137,7 @@ corner_radius_bottom_left = 8
 shader = ExtResource("3_sb48q")
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_r0x5m")
+script = ExtResource("1_joorw")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 4
