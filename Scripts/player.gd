@@ -9,7 +9,6 @@ func _process(delta: float) -> void:
 	if water > 0:
 		water -= delta * 5
 		$AnimatedSprite2D.play("idle")
-		print("Water level: ", water)
 	else:
 		water = 0
 		speed = 0

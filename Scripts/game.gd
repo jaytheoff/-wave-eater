@@ -31,5 +31,8 @@ func _spawn_building(pos) -> void:
 	bld_instance.position = Vector2(pos)
 	add_child(bld_instance)
 
-func _on_spawn_timer1_timeout() -> void:
+	
+
+func _on_spawntimer_1_timeout() -> void:
 	_spawn_building(Vector2(randf_range(563,-170), (randf_range(0,109))))
+	print("spawned building")

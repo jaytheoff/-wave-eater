@@ -295,7 +295,7 @@ color = Color(0.25490198, 0.57254905, 0.7647059, 1)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Spawntimer1" type="Timer" parent="."]
-wait_time = 4.0
 autostart = true
 
 [connection signal="pressed" from="CanvasLayer/Game Over/Retry" to="." method="_on_retry_pressed"]
+[connection signal="timeout" from="Spawntimer1" to="." method="_on_spawntimer_1_timeout"]
