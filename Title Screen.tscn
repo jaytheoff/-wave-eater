@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bibjithung2ax"]
+
+[ext_resource type="Script" uid="uid://31ys14hayuem" path="res://Scripts/Title Screen.gd" id="1_0ijhy"]
+[ext_resource type="FontFile" uid="uid://qkli848ik4nu" path="res://Jersey10-Regular.ttf" id="1_rpgwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ijhy"]
+
+[node name="Title screen" type="Node2D"]
+script = ExtResource("1_0ijhy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Github" type="LinkButton" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 602.0
+offset_right = 480.0
+offset_bottom = 649.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.30980393)
+theme_override_fonts/font = ExtResource("1_rpgwi")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ijhy")
+text = "Github (This game is open sourced)"
+uri = "https://github.com/jaytheoff/-wave-eater"
+
+[node name="Play" type="Button" parent="CanvasLayer"]
+offset_left = 485.0
+offset_top = 411.0
+offset_right = 572.0
+offset_bottom = 481.0
+theme_override_fonts/font = ExtResource("1_rpgwi")
+theme_override_font_sizes/font_size = 57
+text = "Play"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
