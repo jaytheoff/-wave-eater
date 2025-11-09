@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhp27aqeolia"]
+[gd_scene load_steps=17 format=3 uid="uid://bhp27aqeolia"]
 
 [ext_resource type="Script" uid="uid://b35nni8fqcrav" path="res://Scripts/game.gd" id="1_joorw"]
 [ext_resource type="PackedScene" uid="uid://wxa3iodet3df" path="res://player.tscn" id="2_3mrqo"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://dm81qk43mahfl" path="res://scroll.gdshader" id="3_sb48q"]
 [ext_resource type="Texture2D" uid="uid://6vqca1uf7ns0" path="res://Images/Progress bar.png" id="3_t88pq"]
 [ext_resource type="FontFile" uid="uid://qkli848ik4nu" path="res://Jersey10-Regular.ttf" id="4_3mrqo"]
+[ext_resource type="Texture2D" uid="uid://btklfnx5vkak7" path="res://Images/Sky.png" id="8_2vekm"]
 [ext_resource type="Texture2D" uid="uid://dk873xirixyh" path="res://Images/Timer UI.png" id="8_joorw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ubv3"]
@@ -34,6 +35,11 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t88pq"]
 shader = ExtResource("3_sb48q")
+shader_parameter/speed = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_joorw"]
+shader = ExtResource("3_sb48q")
+shader_parameter/speed = 0.02
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -175,7 +181,17 @@ color = Color(0.25490198, 0.57254905, 0.7647059, 1)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Spawntimer1" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
+
+[node name="Sky" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_joorw")
+offset_left = -191.0
+offset_top = -107.0
+offset_right = 574.0
+offset_bottom = 28.0
+texture = ExtResource("8_2vekm")
+stretch_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/Game Over/Retry" to="." method="_on_retry_pressed"]
 [connection signal="timeout" from="Spawntimer1" to="." method="_on_spawntimer_1_timeout"]
