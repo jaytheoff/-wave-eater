@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$CanvasLayer/Water/Progressbar.value = $Player.water
 	$CanvasLayer/Timer/Score.text = str(int(timer))
+	$"CanvasLayer/Game Over/Label".text = "Game Over!\nYou survived for " + str(int(timer)) + " seconds."
 
 	if not $Player.alive:
 		get_tree().paused = true
