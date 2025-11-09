@@ -1,7 +1,7 @@
 extends Node2D
 
 var timer := 0.0
-var building = preload("res://Building.tscn")
+var building = preload("res://Scenes/Building.tscn")
 
 func _ready() -> void:
 	$"CanvasLayer/Game Over".hide()
