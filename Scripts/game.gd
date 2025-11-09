@@ -16,7 +16,11 @@ func _process(delta: float) -> void:
 
 	if not $Player.alive:
 		get_tree().paused = true
-		$"CanvasLayer/Game Over".visible = true
+		$"CanvasLayer/Game Over".show()
+	z_index = int(global_position.y)
+
+
+
 
 	
 

@@ -1,12 +1,116 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhp27aqeolia"]
+[gd_scene load_steps=31 format=3 uid="uid://bhp27aqeolia"]
 
 [ext_resource type="Script" uid="uid://b35nni8fqcrav" path="res://Scripts/game.gd" id="1_joorw"]
-[ext_resource type="PackedScene" uid="uid://wxa3iodet3df" path="res://player.tscn" id="2_3mrqo"]
+[ext_resource type="Script" uid="uid://8a22alr7xu0u" path="res://Scripts/player.gd" id="1_wbfu4"]
+[ext_resource type="Texture2D" uid="uid://b3usyv0oae2sp" path="res://Images/Wave-Sheet.png" id="2_u44n3"]
 [ext_resource type="Texture2D" uid="uid://qwhgr6eqecwo" path="res://Images/Water.png" id="2_xkndl"]
 [ext_resource type="Shader" uid="uid://dm81qk43mahfl" path="res://scroll.gdshader" id="3_sb48q"]
 [ext_resource type="Texture2D" uid="uid://6vqca1uf7ns0" path="res://Images/Progress bar.png" id="3_t88pq"]
 [ext_resource type="FontFile" uid="uid://qkli848ik4nu" path="res://Jersey10-Regular.ttf" id="4_3mrqo"]
 [ext_resource type="Texture2D" uid="uid://dk873xirixyh" path="res://Images/Timer UI.png" id="8_joorw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mrqo"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_joorw"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx171"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhmtn"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwjdr"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvtmh"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyih5"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u44n3"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb48q"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t88pq"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0x5m"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3mrqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mrqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_joorw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vekm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx171")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhmtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwjdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvtmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyih5")
+}],
+"loop": false,
+"name": &"drown",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u44n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb48q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t88pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0x5m")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbfu4"]
+size = Vector2(24, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_joorw"]
+radius = 8.246211
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ubv3"]
 size = Vector2(768, 108)
@@ -36,11 +140,37 @@ corner_radius_bottom_left = 8
 shader = ExtResource("3_sb48q")
 
 [node name="Game" type="Node2D"]
-y_sort_enabled = true
 script = ExtResource("1_joorw")
 
-[node name="Player" parent="." instance=ExtResource("2_3mrqo")]
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+z_index = 4
 position = Vector2(-170, 40)
+script = ExtResource("1_wbfu4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(-1, 7)
+sprite_frames = SubResource("SpriteFrames_3mrqo")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_wbfu4")
+debug_color = Color(0.9822572, 0, 0.36799154, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+limit_left = -192
+limit_top = -105
+limit_right = 574
+limit_bottom = 109
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_joorw")
+debug_color = Color(0.46160442, 0.5932936, 3.85046e-07, 0.41960785)
 
 [node name="Borders" type="StaticBody2D" parent="."]
 
@@ -177,5 +307,6 @@ color = Color(0.25490198, 0.57254905, 0.7647059, 1)
 [node name="Spawntimer1" type="Timer" parent="."]
 autostart = true
 
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="CanvasLayer/Game Over/Retry" to="." method="_on_retry_pressed"]
 [connection signal="timeout" from="Spawntimer1" to="." method="_on_spawntimer_1_timeout"]
