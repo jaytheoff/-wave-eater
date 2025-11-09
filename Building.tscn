@@ -106,7 +106,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Sink",
-"speed": 10.0
+"speed": 24.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nn8dy"]
@@ -118,6 +118,8 @@ script = ExtResource("1_v8dyh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Building"]]
 sprite_frames = SubResource("SpriteFrames_jbmfp")
 animation = &"Sink"
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

@@ -2,7 +2,6 @@ extends Area2D
 
 var _has_been_stepped_on = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.play("Rise")
 	# Start the 5 second timer when the platform appears
@@ -10,19 +9,17 @@ func _ready() -> void:
 	if not _has_been_stepped_on:
 		_sink()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _sink():
 	if _has_been_stepped_on:
 		return  # Prevent multiple calls
 	_has_been_stepped_on = true
+	
+	# Disable collision immediately so player falls through
+	$CollisionShape2D.set_deferred("disabled", true)
+	
 	$AnimatedSprite2D.play("Sink")
-	await get_tree().create_timer(0.01).timeout
+	await $AnimatedSprite2D.animation_finished  # Wait for animation to complete
 	queue_free()
-
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
