@@ -1,4 +1,4 @@
-<tnz framecount="1" version="71.1">
+<tnz framecount="0" version="71.1">
   <generator>
     "OpenToonz 1.7.1"
   </generator>
@@ -357,122 +357,15 @@
     </properties>
   <levelSet>
     <levels>
-      <level id='1'>
-        A 
-        <info dpiType="image"/>
-        <path>
-          "+drawings\\A.tlv"
-        </path>
-        
-      </level>
-      <level id='2'>
-        B 
-        <info dpiType="image"/>
-        <path>
-          "+drawings\\B.pli"
-        </path>
-        
-      </level>
-      <level id='3'>
-        Background 
-        <info dpiType="image"/>
-        <path>
-          "+extras\\Background..tif"
-        </path>
-        
-      </level>
-      <level id='4'>
-        water 
-        <info dpiType="image"/>
-        <path>
-          "+extras\\water..tif"
-        </path>
-        
-      </level>
-      
-    </levels>
-    <folder name="Cast" type="default">
-      <levels>
-        <level id='3'/><level id='1'/><level id='2'/><level id='4'/>
       </levels>
+    <folder name="Cast" type="default">
       </folder>
     <folder name="Audio">
       </folder>
     </levelSet>
   <xsheet>
     <columns>
-      <levelColumn id='5'>
-        
-        <status>
-          0 
-        </status>
-        <cells>
-          <cell>
-            0 1 <level id='3'/>0001 0 
-          </cell>
-          </cells>
-        <fx>
-          <Toonz_columnFx id='6'>
-            
-            <params>
-              </params>
-            <ports>
-              </ports>
-            <numberId>
-              0 
-            </numberId>
-            <name>
-              LevelColumn 
-            </name>
-            <fxId>
-              "" 
-            </fxId>
-            <opened>
-              0 
-            </opened>
-            
-          </Toonz_columnFx>
-          
-        </fx>
-        
-      </levelColumn>
-      <levelColumn id='7'>
-        
-        <status>
-          0 
-        </status>
-        <cells>
-          <cell>
-            0 1 <level id='4'/>0001 0 
-          </cell>
-          </cells>
-        <fx>
-          <Toonz_columnFx id='8'>
-            
-            <params>
-              </params>
-            <ports>
-              </ports>
-            <numberId>
-              0 
-            </numberId>
-            <name>
-              LevelColumn 
-            </name>
-            <fxId>
-              "" 
-            </fxId>
-            <opened>
-              0 
-            </opened>
-            
-          </Toonz_columnFx>
-          
-        </fx>
-        
-      </levelColumn>
-      
-    </columns>
+      </columns>
     <pegbars>
       <pegbar activeboth="yes" id="Camera1">
         <parent handle="B" id="None" parentHandle="B">
@@ -550,83 +443,13 @@
           1.234e+09 5.678e+09 
         </nodePos>
         </pegbar>
-      <pegbar id="Col1">
-        <parent handle="B" id="Table" parentHandle="B">
-          </parent>
-        <isOpened>
-          0 
-        </isOpened>
-        <center>
-          0 0 0 0 
-        </center>
-        <status>
-          0 
-        </status>
-        <sx>
-          <default>
-            1 
-          </default>
-          </sx>
-        <sy>
-          <default>
-            1 
-          </default>
-          </sy>
-        <sc>
-          <default>
-            1 
-          </default>
-          </sc>
-        <nodePos>
-          1.234e+09 5.678e+09 
-        </nodePos>
-        </pegbar>
-      <pegbar id="Col2">
-        <parent handle="B" id="Table" parentHandle="B">
-          </parent>
-        <isOpened>
-          0 
-        </isOpened>
-        <center>
-          0 0 0 0 
-        </center>
-        <status>
-          0 
-        </status>
-        <sx>
-          <default>
-            1 
-          </default>
-          </sx>
-        <sy>
-          <default>
-            1 
-          </default>
-          </sy>
-        <sc>
-          <default>
-            1 
-          </default>
-          </sc>
-        <nodePos>
-          1.234e+09 5.678e+09 
-        </nodePos>
-        </pegbar>
       <grid_dimension>
         1 
       </grid_dimension>
       </pegbars>
     <fxnodes>
-      <terminal>
-        <fxnode>
-          <Toonz_columnFx id='6'/>
-        </fxnode>
-        <fxnode>
-          <Toonz_columnFx id='8'/>
-        </fxnode>
-        </terminal>
       <xsheet>
-        <Toonz_xsheetFx id='9'>
+        <Toonz_xsheetFx id='1'>
           
           <params>
             </params>
@@ -649,13 +472,13 @@
         
       </xsheet>
       <output>
-        <Toonz_outputFx id='10'>
+        <Toonz_outputFx id='2'>
           
           <params>
             </params>
           <ports>
             <source>
-              <Toonz_xsheetFx id='9'/>
+              <Toonz_xsheetFx id='1'/>
             </source>
             </ports>
           <numberId>
@@ -679,8 +502,4 @@
       </grid_dimension>
       </fxnodes>
     </xsheet>
-  <history>
-    "| #    DATE:       Time:   MACHINE:    USER:           |"
-    "| #1   11 Nov 25   20:49   WIN-Q5F50ORKbronz           |"
-  </history>
   </tnz>
