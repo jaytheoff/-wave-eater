@@ -1,35 +1,154 @@
-[gd_scene load_steps=4 format=3 uid="uid://bibjithung2ax"]
+[gd_scene load_steps=24 format=3 uid="uid://bibjithung2ax"]
 
 [ext_resource type="Script" uid="uid://31ys14hayuem" path="res://Scripts/Title Screen.gd" id="1_0ijhy"]
 [ext_resource type="FontFile" uid="uid://qkli848ik4nu" path="res://Jersey10-Regular.ttf" id="1_rpgwi"]
+[ext_resource type="Texture2D" uid="uid://bwebx68v2b5yt" path="res://Images/github icon.png" id="3_1v7g7"]
+[ext_resource type="Texture2D" uid="uid://chirkxfk1bj51" path="res://Images/godot icon.png" id="3_6326y"]
+[ext_resource type="Texture2D" uid="uid://cg157k8yj8yer" path="res://Images/Splash Screen.png" id="4_6326y"]
+[ext_resource type="Texture2D" uid="uid://bnkafs1cewkfv" path="res://Images/sand.png" id="7_cm0df"]
+[ext_resource type="Shader" uid="uid://dm81qk43mahfl" path="res://scroll.gdshader" id="7_ec58t"]
+[ext_resource type="Texture2D" uid="uid://bw6qh65setfo" path="res://Images/Water Bounce2.png" id="8_24db4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ijhy"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1v7g7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6326y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrhfn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm0df"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24db4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ec58t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_haxwa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lu4jc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s57qb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tcsgg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yca7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csse5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62qn3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wrhfn"]
+font = ExtResource("1_rpgwi")
+font_size = 22
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_haxwa"]
+shader = ExtResource("7_ec58t")
+shader_parameter/speed = 0.3
 
 [node name="Title screen" type="Node2D"]
 script = ExtResource("1_0ijhy")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 2
+zoom = Vector2(2, 2)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Github" type="LinkButton" parent="CanvasLayer"]
-offset_left = 5.0
-offset_top = 602.0
-offset_right = 480.0
-offset_bottom = 649.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.30980393)
-theme_override_fonts/font = ExtResource("1_rpgwi")
-theme_override_font_sizes/font_size = 39
-theme_override_styles/focus = SubResource("StyleBoxEmpty_0ijhy")
-text = "Github (This game is open sourced)"
-uri = "https://github.com/jaytheoff/-wave-eater"
+[node name="Menu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 
-[node name="Play" type="Button" parent="CanvasLayer"]
-offset_left = 485.0
-offset_top = 411.0
-offset_right = 572.0
-offset_bottom = 481.0
-theme_override_fonts/font = ExtResource("1_rpgwi")
-theme_override_font_sizes/font_size = 57
-text = "Play"
+[node name="Github" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 0.9999924
+offset_top = 520.0
+offset_right = 64.99999
+offset_bottom = 592.0
+rotation = -0.23062259
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1v7g7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6326y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wrhfn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cm0df")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_24db4")
+icon = ExtResource("3_1v7g7")
 flat = true
 
-[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
+[node name="Godot" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 505.0
+offset_right = 211.0
+offset_bottom = 577.0
+rotation = 0.060005397
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ec58t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_haxwa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lu4jc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_s57qb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tcsgg")
+icon = ExtResource("3_6326y")
+flat = true
+
+[node name="PFP" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 999.9999
+offset_top = 498.99997
+offset_right = 1071.9999
+offset_bottom = 565.0
+rotation = 0.07500002
+scale = Vector2(2, 2)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yca7k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_csse5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_62qn3")
+icon = ExtResource("4_6326y")
+flat = true
+
+[node name="Credit" type="Label" parent="CanvasLayer/Menu"]
+modulate = Color(1, 1, 1, 0.28235295)
+layout_mode = 0
+offset_left = 509.0
+offset_top = 623.0
+offset_right = 729.0
+offset_bottom = 647.0
+text = "A game by Jean Junior Jams "
+label_settings = SubResource("LabelSettings_wrhfn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -288.0
+offset_top = -162.0
+offset_right = 288.0
+offset_bottom = 162.0
+texture = ExtResource("7_cm0df")
+stretch_mode = 1
+
+[node name="Water" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -288.0
+offset_top = 81.0
+offset_right = 288.0
+offset_bottom = 317.0
+
+[node name="wave" type="TextureRect" parent="Water"]
+material = SubResource("ShaderMaterial_haxwa")
+layout_mode = 0
+offset_top = 2.0
+offset_right = 577.0
+offset_bottom = 34.0
+texture = ExtResource("8_24db4")
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Water"]
+layout_mode = 0
+offset_top = 34.0
+offset_right = 577.0
+offset_bottom = 208.0
+color = Color(0.25490198, 0.57254905, 0.7647059, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.90991473, 0.9331488, 0.618061, 1)
+
+[connection signal="button_down" from="CanvasLayer/Menu/Github" to="." method="_on_github_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu/Godot" to="." method="_on_godot_link_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu/PFP" to="." method="_on_pfp_link_button_down"]
