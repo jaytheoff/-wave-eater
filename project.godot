@@ -11,17 +11,46 @@ config_version=5
 [application]
 
 config/name="Wave Eater"
+config/description="Cool Game"
+config/version="1.0"
+run/main_scene="uid://bibjithung2ax"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0.45885003, 0.6913932, 1)
+boot_splash/image="uid://bswaffwunklif"
+config/icon="uid://qwhgr6eqecwo"
+
+[autoload]
+
+NG="*res://addons/newgrounds/scripts/newgrounds.tscn"
+NGCloudSave="*res://addons/newgrounds/scripts/newgrounds_cloudsave.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/newgrounds/plugin.cfg")
+
 [global_group]
 
 Player=""
 Building=""
+CloudSave="Newgrounds Cloudsave"
+
+[input]
+
+Begin={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[newgrounds.io]
+
+app_id="61103:TF21f6iP"
+AES-128_key="AT5MaUoG+0VF1KFf+lFO2Q=="
+opened_getting_started_page=true
 
 [rendering]
 

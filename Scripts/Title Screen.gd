@@ -66,3 +66,7 @@ func _on_pfp_link_button_down() -> void:
 
 func _on_github_button_down() -> void:
 	OS.shell_open("https://github.com/jaytheoff/-wave-eater")
+
+
+func _on_play_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Game.tscn")
