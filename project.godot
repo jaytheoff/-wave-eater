@@ -13,9 +13,9 @@ config_version=5
 config/name="Wave Eater"
 config/description="Cool Game"
 config/version="1.0"
-run/main_scene="uid://bibjithung2ax"
+run/main_scene="uid://bh2p1rvhlg8rp"
 config/features=PackedStringArray("4.5", "Forward Plus")
-boot_splash/bg_color=Color(0, 0.45885003, 0.6913932, 1)
+boot_splash/bg_color=Color(5.646339e-05, 0.036062725, 0.2169613, 1)
 boot_splash/image="uid://bswaffwunklif"
 config/icon="uid://qwhgr6eqecwo"
 

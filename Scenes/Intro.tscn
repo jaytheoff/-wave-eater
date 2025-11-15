@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=3 uid="uid://bh2p1rvhlg8rp"]
+
+[ext_resource type="FontFile" uid="uid://qkli848ik4nu" path="res://Jersey10-Regular.ttf" id="1_3edat"]
+[ext_resource type="Script" uid="uid://ktswuv3iaoj1" path="res://Scripts/Intro.gd" id="1_u3s32"]
+[ext_resource type="Texture2D" uid="uid://cea52oxetrnmn" path="res://Images/keybinds.png" id="2_rrrc0"]
+[ext_resource type="Texture2D" uid="uid://clxak3xgkvmlh" path="res://Images/(unclicked) Click here!.png" id="3_d0kpp"]
+[ext_resource type="Texture2D" uid="uid://cuxlvvy63wtk2" path="res://Images/Click here!.png" id="3_vmpge"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rrrc0"]
+font = ExtResource("1_3edat")
+font_size = 19
+font_color = Color(0.21950102, 0.21950102, 0.21950102, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vmpge"]
+font = ExtResource("1_3edat")
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_d0kpp"]
+font = ExtResource("1_3edat")
+font_size = 38
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3s32")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Menu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Background" type="ColorRect" parent="Menu"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 1152.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="Credit" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 614.0
+offset_right = 1151.0
+offset_bottom = 648.0
+
+[node name="Credit" type="Label" parent="Menu/Credit"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 6.0
+offset_right = 649.0
+offset_bottom = 28.0
+text = "2025 Jean Junior Jams"
+label_settings = SubResource("LabelSettings_rrrc0")
+
+[node name="ColorRect2" type="ColorRect" parent="Menu/Credit"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 485.0
+offset_bottom = 18.0
+color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Menu/Credit"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 15.0
+offset_right = 1134.0
+offset_bottom = 18.0
+color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+
+[node name="Title" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 1151.0
+offset_bottom = 44.0
+
+[node name="Credit" type="Label" parent="Menu/Title"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 6.0
+offset_right = 649.0
+offset_bottom = 28.0
+text = "Instructions Board"
+label_settings = SubResource("LabelSettings_rrrc0")
+
+[node name="ColorRect2" type="ColorRect" parent="Menu/Title"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 485.0
+offset_bottom = 18.0
+color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Menu/Title"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 15.0
+offset_right = 1134.0
+offset_bottom = 18.0
+color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+
+[node name="Instructons" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 33.0
+offset_right = 1134.0
+offset_bottom = 615.0
+
+[node name="Keyword" type="TextureRect" parent="Menu/Instructons"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 435.0
+offset_right = 175.0
+offset_bottom = 481.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_rrrc0")
+
+[node name="Controls" type="Label" parent="Menu/Instructons"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 485.0
+offset_right = 567.0
+offset_bottom = 527.0
+text = "Use Arrow keys to play."
+label_settings = SubResource("LabelSettings_vmpge")
+
+[node name="Goal" type="Label" parent="Menu/Instructons"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 362.0
+offset_right = 697.0
+offset_bottom = 404.0
+text = "Eat Sunken Buildings to keep the wave going"
+label_settings = SubResource("LabelSettings_d0kpp")
+
+[node name="Play" type="TextureButton" parent="Menu/Instructons"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 125.000015
+offset_right = 395.0
+offset_bottom = 148.00002
+scale = Vector2(6, 6)
+texture_normal = ExtResource("3_d0kpp")
+texture_pressed = ExtResource("3_vmpge")
+texture_hover = ExtResource("3_vmpge")
+texture_disabled = ExtResource("3_d0kpp")
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Menu/Instructons/Play" to="." method="_on_play_pressed"]

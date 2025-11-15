@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botni14ama5rl"
-path="res://.godot/imported/Intro .png-e327338c23ec7d896856c2a446250e74.ctex"
+uid="uid://cea52oxetrnmn"
+path="res://.godot/imported/keybinds.png-78b9dcd55b51db61fdcee7ea4f3bac6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Intro/sceneIcons/Intro .png"
-dest_files=["res://.godot/imported/Intro .png-e327338c23ec7d896856c2a446250e74.ctex"]
+source_file="res://Images/keybinds.png"
+dest_files=["res://.godot/imported/keybinds.png-78b9dcd55b51db61fdcee7ea4f3bac6e.ctex"]
 
 [params]
 
