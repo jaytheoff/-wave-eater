@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh2p1rvhlg8rp"]
+[gd_scene load_steps=10 format=3 uid="uid://bh2p1rvhlg8rp"]
 
 [ext_resource type="FontFile" uid="uid://qkli848ik4nu" path="res://Jersey10-Regular.ttf" id="1_3edat"]
 [ext_resource type="Script" uid="uid://ktswuv3iaoj1" path="res://Scripts/Intro.gd" id="1_u3s32"]
+[ext_resource type="VideoStream" uid="uid://b28phbceeya6r" path="res://Intro/intro.ogv" id="2_ina6a"]
 [ext_resource type="Texture2D" uid="uid://cea52oxetrnmn" path="res://Images/keybinds.png" id="2_rrrc0"]
 [ext_resource type="Texture2D" uid="uid://clxak3xgkvmlh" path="res://Images/(unclicked) Click here!.png" id="3_d0kpp"]
 [ext_resource type="Texture2D" uid="uid://cuxlvvy63wtk2" path="res://Images/Click here!.png" id="3_vmpge"]
@@ -29,21 +30,27 @@ grow_vertical = 2
 script = ExtResource("1_u3s32")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+z_index = 1
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = 132.0
+offset_top = 42.0
+offset_right = 1030.0
+offset_bottom = 604.0
+stream = ExtResource("2_ina6a")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -117.0
+offset_top = -69.0
+offset_right = 1237.0
+offset_bottom = 719.0
+color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control" parent="."]
+z_index = 2
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-
-[node name="Background" type="ColorRect" parent="Menu"]
-layout_mode = 0
-offset_top = -2.0
-offset_right = 1152.0
-offset_bottom = 646.0
-color = Color(0, 0, 0, 1)
 
 [node name="Credit" type="Control" parent="Menu"]
 anchors_preset = 0

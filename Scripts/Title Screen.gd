@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	$AnimationPlayer.play("Intro")
 	_animate_git()
 	_ainmate_godot()
 	_animate_pfp()

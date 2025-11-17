@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="Talk bubble 2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title3">Talk bubble 2</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.71891835"
+     inkscape:cx="397.12437"
+     inkscape:cy="449.98156"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="94.586541"
+       y="489.62445"
+       width="422.85748"
+       height="228.12048"
+       id="rect6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       inkscape:label="Bubble"
+       transform="matrix(0.98986319,0,0,0.51086925,1.9324702,104.53646)">
+      <path
+         d="m 44.406692,195.07911 c -8.553159,0 -16.346988,-0.87013 -16.346988,6.18778 0,7.0579 -22.6299129,29.1196 -14.076754,29.1196 8.553157,0 45.862555,-15.50975 45.862555,-22.56764 0,-7.05792 -6.885656,-12.73974 -15.438813,-12.73974 z"
+         style="fill:#1a1a1a;stroke-width:0.292277"
+         id="path2"
+         sodipodi:nodetypes="sssss"
+         transform="matrix(1.0102406,0,0,1.957448,-1.9522599,-204.62469)" />
+      <rect
+         style="fill:#1a1a1a;fill-opacity:1;stroke-width:0.288989"
+         id="rect1"
+         width="170.17531"
+         height="179.53889"
+         x="20.464094"
+         y="32.386616"
+         rx="19.185972"
+         ry="20.685125" />
+    </g>
+    <g
+       id="g3"
+       inkscape:label="Bubble">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.180484"
+         id="rect2"
+         width="155.67657"
+         height="76.550186"
+         x="27.60223"
+         y="126.97026"
+         rx="6.8784761"
+         ry="8.81954" />
+      <path
+         d="m 46.371615,189.53553 c -6.932208,0 -13.24899,-0.87977 -13.24899,6.25633 0,7.1361 -18.341211,29.44221 -11.409003,29.44221 6.932208,0 37.170924,-15.68157 37.170924,-22.81767 0,-7.1361 -5.580723,-12.88087 -12.512931,-12.88087 z"
+         style="fill:#ffffff;stroke-width:0.264583"
+         id="path3"
+         sodipodi:nodetypes="sssss" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1111px;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#1a1a1a;stroke-width:0.264583"
+       x="31.650558"
+       y="144.63568"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="font-size:14.1111px;stroke-width:0.264583"
+         x="31.650558"
+         y="144.63568"
+         id="tspan5">OOps... </tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text6"
+       style="fill:#1a1a1a;text-orientation:auto;text-align:start;writing-mode:lr-tb;direction:ltr;-inkscape-font-specification:'Anime Ace 2.0 BB Bold';font-family:'Anime Ace 2.0 BB';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:53.33333333px;white-space:pre;shape-inside:url(#rect6)" />
+  </g>
+  <metadata
+     id="metadata3">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Talk bubble 2</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
